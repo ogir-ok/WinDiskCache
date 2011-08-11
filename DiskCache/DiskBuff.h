@@ -4,9 +4,6 @@
  *  Created on: Aug 1, 2011
  *      Author: user
  */
-#pragma once
-
-using namespace System;
 
 # define DISK_BLOCK_CHANGED 1
 # define DISK_BLOCK_NOT_CHANGED 0

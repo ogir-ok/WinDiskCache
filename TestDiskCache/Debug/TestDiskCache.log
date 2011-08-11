@@ -1,0 +1,13 @@
+﻿Build started 11.08.2011 17:33:51.
+Project "C:\WinDiskCache\TestDiskCache\TestDiskCache.vcxproj" on node 2 (build target(s)).
+InitializeBuildStatus:
+  Touching "Debug\TestDiskCache.unsuccessfulbuild".
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt TestDiskCache.cpp
+  TestDiskCache.cpp
+c:\windiskcache\testdiskcache\testdiskcache.cpp(16): fatal error C1083: Cannot open include file: 'DiskCache.h': No such file or directory
+Done Building Project "C:\WinDiskCache\TestDiskCache\TestDiskCache.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.42

@@ -4,16 +4,13 @@
  *  Created on: Aug 1, 2011
  *      Author: user
  */
-#pragma once
 
-using namespace System;
 
 #ifndef DISKBUFFREEFLIST_H_
 #define DISKBUFFREEFLIST_H_
 
 #include "DiskBuff.h"
 #include <Mutex.h>
-#include <RWLock.h>
 #include <FSDriver.h>
 #include <stdlib.h>
 

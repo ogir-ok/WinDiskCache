@@ -5,7 +5,6 @@
  *      Author: user
  */
 
-#include "stdafx.h"
 #include"DiskBuffFreeList.h"
 
 DiskBuffFreeList::DiskBuffFreeList()

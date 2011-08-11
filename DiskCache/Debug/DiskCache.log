@@ -1,0 +1,65 @@
+﻿Build started 11.08.2011 17:33:27.
+Project "C:\WinDiskCache\DiskCache\DiskCache.vcxproj" on node 2 (rebuild target(s)).
+_PrepareForClean:
+  Deleting file "Debug\DiskCache.lastbuildstate".
+InitializeBuildStatus:
+  Touching "Debug\DiskCache.unsuccessfulbuild".
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:/WinDiskCache/FSDriver /IC:/WinDiskCache/File /IC:/WinDiskCache/Threading /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D DISKCACHE_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DiskBuff.cpp DiskBuffFreeList.cpp DiskBuffFullList.cpp DiskBuffHashTable.cpp DiskCache.cpp
+  DiskCache.cpp
+c:\windiskcache\fsdriver\fsdriver.h(25): warning C4251: 'FSDriver::_areaList' : class 'std::vector<_Ty>' needs to have dll-interface to be used by clients of class 'FSDriver'
+          with
+          [
+              _Ty=FSArea *
+          ]
+  DiskBuffHashTable.cpp
+c:\windiskcache\fsdriver\fsdriver.h(25): warning C4251: 'FSDriver::_areaList' : class 'std::vector<_Ty>' needs to have dll-interface to be used by clients of class 'FSDriver'
+          with
+          [
+              _Ty=FSArea *
+          ]
+  DiskBuffFullList.cpp
+c:\windiskcache\fsdriver\fsdriver.h(25): warning C4251: 'FSDriver::_areaList' : class 'std::vector<_Ty>' needs to have dll-interface to be used by clients of class 'FSDriver'
+          with
+          [
+              _Ty=FSArea *
+          ]
+  DiskBuffFreeList.cpp
+c:\windiskcache\fsdriver\fsdriver.h(25): warning C4251: 'FSDriver::_areaList' : class 'std::vector<_Ty>' needs to have dll-interface to be used by clients of class 'FSDriver'
+          with
+          [
+              _Ty=FSArea *
+          ]
+  DiskBuff.cpp
+  Generating Code...
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\DiskCache.dll.embed.manifest.res" Debug\DiskCache_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\WinDiskCache\Debug\DiskCache.dll" /INCREMENTAL /NOLOGO C:\WinDiskCache\Debug\Threading.lib C:\WinDiskCache\Debug\FSDriver.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\DiskCache.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\WinDiskCache\Debug\DiskCache.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\WinDiskCache\Debug\DiskCache.lib" /MACHINE:X86 /DLL Debug\DiskCache.dll.embed.manifest.res
+  Debug\DiskBuff.obj
+  Debug\DiskBuffFreeList.obj
+  Debug\DiskBuffFullList.obj
+  Debug\DiskBuffHashTable.obj
+  Debug\DiskCache.obj
+     Creating library C:\WinDiskCache\Debug\DiskCache.lib and object C:\WinDiskCache\Debug\DiskCache.exp
+Manifest:
+  Deleting file "Debug\DiskCache.dll.embed.manifest".
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\DiskCache.dll.embed.manifest" /manifest Debug\DiskCache.dll.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\DiskCache.dll.embed.manifest.res" Debug\DiskCache_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\WinDiskCache\Debug\DiskCache.dll" /INCREMENTAL /NOLOGO C:\WinDiskCache\Debug\Threading.lib C:\WinDiskCache\Debug\FSDriver.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\DiskCache.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\WinDiskCache\Debug\DiskCache.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\WinDiskCache\Debug\DiskCache.lib" /MACHINE:X86 /DLL Debug\DiskCache.dll.embed.manifest.res
+  Debug\DiskBuff.obj
+  Debug\DiskBuffFreeList.obj
+  Debug\DiskBuffFullList.obj
+  Debug\DiskBuffHashTable.obj
+  Debug\DiskCache.obj
+     Creating library C:\WinDiskCache\Debug\DiskCache.lib and object C:\WinDiskCache\Debug\DiskCache.exp
+  DiskCache.vcxproj -> C:\WinDiskCache\Debug\DiskCache.dll
+FinalizeBuildStatus:
+  Deleting file "Debug\DiskCache.unsuccessfulbuild".
+  Touching "Debug\DiskCache.lastbuildstate".
+Done Building Project "C:\WinDiskCache\DiskCache\DiskCache.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:13.87

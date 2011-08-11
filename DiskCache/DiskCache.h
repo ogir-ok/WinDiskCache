@@ -4,22 +4,22 @@
  *  Created on: Aug 2, 2011
  *      Author: user
  */
-#pragma once
 
-using namespace System;
 
 #ifndef DISKCACHE_H_
 #define DISKCACHE_H_
 
 #define MAX_BUFF_COUNT 256
 
+#define DllExport   __declspec( dllexport )
+
 #include <FSDriver.h>
 #include <Mutex.h>
-#include <RWLock.h>
 #include "DiskBuffHashTable.h"
 #include "DiskBuffFreeList.h"
 
-class DiskCache
+
+class DllExport DiskCache
 {
 private:
 	DiskBuffHashTable* _diskBuffHashTable;

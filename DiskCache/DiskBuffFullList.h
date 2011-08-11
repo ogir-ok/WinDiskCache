@@ -4,9 +4,6 @@
  *  Created on: Aug 1, 2011
  *      Author: user
  */
-#pragma once
-
-using namespace System;
 
 #ifndef DISKBUFFFULLLIST_H_
 #define DISKBUFFFULLLIST_H_
@@ -15,7 +12,6 @@ using namespace System;
 
 #include <FSDriver.h>
 #include <Mutex.h>
-#include <RWLock.h>
 
 #include "DiskBuff.h"
 

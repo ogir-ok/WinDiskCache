@@ -4,9 +4,6 @@
  *  Created on: Jul 29, 2011
  *      Author: user
  */
-#pragma once
-
-using namespace System;
 
 #ifndef FSDRIVER_H_
 #define FSDRIVER_H_
@@ -19,7 +16,9 @@ using namespace System;
 #include <vector>
 using namespace std;
 
-class FSDriver  //reload virtual class FSDriver
+#define DllExport   __declspec( dllexport )
+
+class DllExport FSDriver  //reload virtual class FSDriver
 {
 private:
 	int _areaCount;

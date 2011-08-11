@@ -5,7 +5,6 @@
  *      Author: user
  */
 
-#include "stdafx.h"
 #include "DiskBuffFullList.h"
 DiskBuffFullList::DiskBuffFullList()
 {

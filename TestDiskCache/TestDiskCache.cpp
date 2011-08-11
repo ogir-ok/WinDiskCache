@@ -13,7 +13,6 @@
 #define MAX_BLOCK 100
 #include <stdio.h>
 #include <stdlib.h>
-#include <pthread.h>
 #include <DiskCache.h>
 #include <ctime>
 

@@ -4,7 +4,6 @@
  *  Created on: Aug 2, 2011
  *      Author: user
  */
-#include "stdafx.h"
 #include "DiskCache.h"
 DiskCache::DiskCache(char* DiskConfigFile)
 {

@@ -14,10 +14,11 @@
 #include <stdio.h>
 #include <share.h>
 
+#define DllExport   __declspec( dllexport )
 
 typedef char*  BlockData;
 
-class File
+class DllExport File
 {
 private:
 	int _fileStreamId;

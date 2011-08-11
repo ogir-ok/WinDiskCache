@@ -5,7 +5,6 @@
  *      Author: user
  */
 
-#include "stdafx.h"
 #include <stdlib.h>
 #include "DiskBuff.h"
 

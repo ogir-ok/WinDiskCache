@@ -26,7 +26,9 @@ public:
 #elif WINDOWS*/
 #include <Windows.h>
 
-class Mutex
+#define DllExport   __declspec( dllexport )
+
+class DllExport Mutex
 {
 private:
 	HANDLE _mutex;

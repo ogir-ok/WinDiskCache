@@ -5,10 +5,10 @@
  *      Author: user
  */
 //#include <cstdio>
-#include "stdafx.h"
+
 #include "FSArea.h"
-#include <sys/types.h>
-#include <unistd.h>
+//#include <sys/types.h>
+//#include <unistd.h>
 
 
 

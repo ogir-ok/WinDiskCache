@@ -4,9 +4,6 @@
  *  Created on: Aug 1, 2011
  *      Author: user
  */
-#pragma once
-
-using namespace System;
 
 #define HASH_SIZE 16
 
@@ -18,7 +15,6 @@ class DiskBuffHashTable
 {
 private:
 	vector<DiskBuffFullList*>  _hash;
-	RWLock _lock;
 public:
 	DiskBuffHashTable();
 	~DiskBuffHashTable();
