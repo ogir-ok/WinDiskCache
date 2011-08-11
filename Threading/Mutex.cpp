@@ -35,22 +35,25 @@ void Mutex::Unlock()
 
 Mutex::Mutex()
 {
-	_mutex.
+	_mutex = CreateMutex(0, FALSE, 0);
 }
 
 Mutex::~Mutex()
 {
-	pthread_mutex_destroy(&(_mutex));
+	if(WaitForSingleObject(_mutex, (DWORD)0) != WAIT_TIMEOUT )
+	{
+		CloseHandle(_mutex);
+	}
 }
 
 void Mutex::Lock()
 {
-	pthread_mutex_lock(&(_mutex));
+	WaitForSingleObject(_mutex,INFINITE);
 }
 
 void Mutex::Unlock()
 {
-	pthread_mutex_unlock(&(_mutex));
+	ReleaseMutex(_mutex);
 }
 
 /*

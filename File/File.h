@@ -8,11 +8,12 @@
 #ifndef FILE_H_
 #define FILE_H_
 
-#include <sys/types.h>
-#include <unistd.h>
+#include <io.h>
 #include <fcntl.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <share.h>
+
 
 typedef char*  BlockData;
 

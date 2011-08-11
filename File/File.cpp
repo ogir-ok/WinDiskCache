@@ -10,25 +10,25 @@
 
 File::File(const char *fileName)
 {
-	_fileStreamId = open(fileName,O_RDWR|O_SYNC);//func
+	_fileStreamId = _open(fileName,O_RDWR);//func
 }
 
 File::~File()
 {
-	close(_fileStreamId);
+	_close(_fileStreamId);
 }
 
 int File::Lseek(int offset)
 {
-	return lseek(_fileStreamId,offset,SEEK_SET);
+	return _lseek(_fileStreamId,offset,SEEK_SET);
 }
 
 int File::Read(BlockData* container, int size)
 {
-	return read(_fileStreamId,*(container),size);
+	return _read(_fileStreamId,*(container),size);
 }
 
 int File::Write(BlockData value,int size)
 {
-	return write(_fileStreamId,value,size);
+	return _write(_fileStreamId,value,size);
 }

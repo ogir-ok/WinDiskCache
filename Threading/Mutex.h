@@ -4,7 +4,6 @@
  *  Created on: Jul 29, 2011
  *      Author: user
  */
-#include "Stdafx.h"
 
 #ifndef MUTEX_H_
 #define MUTEX_H_
@@ -25,17 +24,17 @@ public:
 };
 
 #elif WINDOWS*/
-ddd
+#include <Windows.h>
+
 class Mutex
 {
 private:
-	System::Threading::Mutex _mutex;
+	HANDLE _mutex;
 public:
 	Mutex();
 	~Mutex();
 	void Lock();
 	void Unlock();
-};*/
-
+};
 //#endif
 #endif /* MUTEX_H_ */
