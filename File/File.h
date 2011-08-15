@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <share.h>
-
+#include <Windows.h>
 #define DllExport   __declspec( dllexport )
 
 typedef char*  BlockData;
@@ -22,6 +22,7 @@ class DllExport File
 {
 private:
 	int _fileStreamId;
+	//HANDLE _fileStream;
 public:
 	File(const char *fileName);
 	~File();

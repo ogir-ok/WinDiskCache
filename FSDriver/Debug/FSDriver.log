@@ -1,7 +1,5 @@
-﻿Build started 11.08.2011 17:31:53.
-Project "C:\WinDiskCache\FSDriver\FSDriver.vcxproj" on node 2 (rebuild target(s)).
-_PrepareForClean:
-  Deleting file "Debug\FSDriver.lastbuildstate".
+﻿Build started 12.08.2011 17:01:19.
+Project "C:\WinDiskCache\FSDriver\FSDriver.vcxproj" on node 2 (build target(s)).
 InitializeBuildStatus:
   Creating "Debug\FSDriver.unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
@@ -18,30 +16,27 @@ c:\windiskcache\fsdriver\fsdriver.cpp(36): warning C4996: 'fscanf': This functio
           c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
 c:\windiskcache\fsdriver\fsdriver.cpp(40): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
           c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
-  FSArea.cpp
   Generating Code...
+  Skipping... (no relevant changes detected)
+  FSArea.cpp
 ManifestResourceCompile:
-  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\FSDriver.dll.embed.manifest.res" Debug\FSDriver_manifest.rc 
+  All outputs are up-to-date.
 Link:
   C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\WinDiskCache\Debug\FSDriver.dll" /INCREMENTAL /NOLOGO C:\WinDiskCache\Debug\File.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\FSDriver.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\WinDiskCache\Debug\FSDriver.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\WinDiskCache\Debug\FSDriver.lib" /MACHINE:X86 /DLL Debug\FSDriver.dll.embed.manifest.res
   Debug\FSArea.obj
   Debug\FSDriver.obj
      Creating library C:\WinDiskCache\Debug\FSDriver.lib and object C:\WinDiskCache\Debug\FSDriver.exp
 Manifest:
-  Deleting file "Debug\FSDriver.dll.embed.manifest".
   C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\FSDriver.dll.embed.manifest" /manifest Debug\FSDriver.dll.intermediate.manifest
-  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\FSDriver.dll.embed.manifest.res" Debug\FSDriver_manifest.rc 
+  All outputs are up-to-date.
 LinkEmbedManifest:
-  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\WinDiskCache\Debug\FSDriver.dll" /INCREMENTAL /NOLOGO C:\WinDiskCache\Debug\File.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\FSDriver.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\WinDiskCache\Debug\FSDriver.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\WinDiskCache\Debug\FSDriver.lib" /MACHINE:X86 /DLL Debug\FSDriver.dll.embed.manifest.res
-  Debug\FSArea.obj
-  Debug\FSDriver.obj
-     Creating library C:\WinDiskCache\Debug\FSDriver.lib and object C:\WinDiskCache\Debug\FSDriver.exp
+  All outputs are up-to-date.
   FSDriver.vcxproj -> C:\WinDiskCache\Debug\FSDriver.dll
 FinalizeBuildStatus:
   Deleting file "Debug\FSDriver.unsuccessfulbuild".
   Touching "Debug\FSDriver.lastbuildstate".
-Done Building Project "C:\WinDiskCache\FSDriver\FSDriver.vcxproj" (rebuild target(s)).
+Done Building Project "C:\WinDiskCache\FSDriver\FSDriver.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:05.15
+Time Elapsed 00:00:04.36

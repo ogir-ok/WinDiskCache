@@ -6,91 +6,98 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-#define DISK_CONF_FILE "/home/user/workspace/cpp/DiskCache/.disk.conf"
+#define DISK_CONF_FILE "c:/WinDiskCache/disks/disks.txt"
 #define READERS_COUNT 10
-#define WRITERS_COUNT 10
+#define WRITERS_COUNT 5
 #define FS_COUNT 6
-#define MAX_BLOCK 100
+#define MAX_BLOCK 10
 #include <stdio.h>
 #include <stdlib.h>
 #include <DiskCache.h>
 #include <ctime>
+#include <Windows.h>
+#include <process.h>
+//using namespace System::Threading;
+#ifndef _MT 
+#define _MT
+#endif
 
 DiskCache* cache;
-pthread_t* readers;
+HANDLE* readers;
+HANDLE* writers;
+HANDLE rand_mutex;
+HANDLE console_mutex;
 
-pthread_t* writers;
-pthread_mutex_t rand_mutex;
-pthread_mutex_t console_mutex;
-
-void* f_readers(void* arg)
+unsigned CALLBACK f_readers(PVOID pvParam)
 {
-
-	pthread_mutex_lock(&rand_mutex);
+	WaitForSingleObject(rand_mutex,INFINITE);
 	srand(time(NULL));
 	int dr = rand() % MAX_BLOCK;
 	int fr = rand() % FS_COUNT;
-
-	pthread_mutex_unlock(&rand_mutex);
 	char* ret;
 	try
 	{
+		printf("Try read< fs : %4d block : %5d >\n",fr,dr);
 		ret = cache->Read(fr , dr * BLOCK_SIZE, BLOCK_SIZE);
-		pthread_mutex_lock(&console_mutex);
-		printf("read:%s\n",ret);
-		pthread_mutex_unlock(&console_mutex);
+		//printf("read:%p\n", ret);
+		cout<<"read"<<*ret<<endl;
 	}
 	catch(char* exception)
 	{
-		printf("%s/n", exception);
+		printf("%s\n", exception);
 	}
-	return (void*)0;
+	ReleaseMutex(rand_mutex);
+	return 0;
 }
-void* f_writers(void* arg)
+
+unsigned CALLBACK f_writers(PVOID pvParam)
 {
-	pthread_mutex_lock(&rand_mutex);
+	WaitForSingleObject(rand_mutex,INFINITE);
 	srand(time(NULL));
 	int dr = rand() % MAX_BLOCK;
 	int fr = rand() % FS_COUNT;
-	pthread_mutex_unlock(&rand_mutex);
-	char *a=(char*)malloc(BLOCK_SIZE*sizeof(char));
+	
+	//char *a=(char*)malloc(BLOCK_SIZE*sizeof(char));
+	char* a = new char[BLOCK_SIZE];
 	try
 	{
-		cache->Write(fr, dr * BLOCK_SIZE, BLOCK_SIZE,(char*)a);
-		pthread_mutex_lock(&console_mutex);
+		//cache->Write(fr, dr * BLOCK_SIZE, BLOCK_SIZE,(char*)a);
+		//WaitForSingleObject(console_mutex,INFINITE);
 		printf("wrote\n");
-		pthread_mutex_unlock(&console_mutex);
+		//ReleaseMutex(console_mutex);
 	}
 	catch(char* exception)
 	{
 		printf("%s/n", exception);
 	}
-	free(a);
-	return (void*)0;
+	delete [] a;
+	ReleaseMutex(rand_mutex);
+	return 0;
 }
 
 int main()
 {
 	cache = new DiskCache((char*)DISK_CONF_FILE);
-	readers = new pthread_t[READERS_COUNT];
-	writers = new pthread_t[WRITERS_COUNT];
-	pthread_mutex_init(&rand_mutex,NULL);
-	pthread_mutex_init(&console_mutex,NULL);
+	readers = new HANDLE[READERS_COUNT];
+	writers = new HANDLE[WRITERS_COUNT];
+	rand_mutex = CreateMutex(0,false,0);
 
-	for (int i=0;i<READERS_COUNT;i++)
+	WaitForSingleObject(rand_mutex,INFINITE);
+	for (int i=0; i<READERS_COUNT; i++)
  	{
- 		pthread_create(&readers[i],NULL,f_readers,NULL);
- 		printf(" reader thread created\n");
+		readers[i] = (HANDLE)_beginthreadex(NULL, 0, f_readers, NULL, 0, NULL);
+ 		//printf(" reader thread created\n");
  	}
-
+	ReleaseMutex(rand_mutex);
+/*
 	for (int i=0;i<WRITERS_COUNT;i++)
  	{
- 		pthread_create(&writers[i],NULL,f_writers,NULL);
- 		printf("writer thread created\n");
+		//writers[i]=(HANDLE)_beginthreadex(NULL, 0, f_writers, NULL, 0, NULL);
+ 		//printf("writer thread created\n");
  	}
+	*/
 
-
- 	for (int i=0;i<READERS_COUNT;i++)
+ 	/*for (int i=0;i<READERS_COUNT;i++)
 	{
 		void* tr_ret=NULL;
 		pthread_join(readers[i],&tr_ret);
@@ -100,12 +107,26 @@ int main()
 	{
 		void* tr_ret=NULL;
 		pthread_join(writers[i],&tr_ret);
-	}
+	}*/
 
- 	delete[] writers;
- 	delete[] readers;
- 	printf("exit\n");
- 	pthread_mutex_destroy(&rand_mutex);
- 	pthread_mutex_destroy(&console_mutex);
+
+	
+
+	//if(WaitForSingleObject(rand_mutex, (DWORD)0) != WAIT_TIMEOUT )
+	//{
+	WaitForMultipleObjects(READERS_COUNT, readers, TRUE, INFINITE);
+	WaitForMultipleObjects(WRITERS_COUNT, writers, TRUE, INFINITE);
+
+	CloseHandle(rand_mutex);
+	//}
+	//if(WaitForSingleObject(console_mutex, (DWORD)0) != WAIT_TIMEOUT )
+	//{
+	//CloseHandle(console_mutex);
+	//}
+	printf("exit\n");
+
+	delete [] readers;
+	delete [] writers;
+	std::cin.get();
 	return 0;
 }

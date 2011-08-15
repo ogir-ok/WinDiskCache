@@ -65,16 +65,16 @@ void DiskBuffFullList::Delete(DiskBuff * currentElement)
 DiskBuff* DiskBuffFullList::Get(int fsId, int blockNum)
 {
 	DiskBuff *temp = _pHead;
-	  	temp = _pHead;
-	    while (temp != NULL)
+	temp = _pHead;
+	while ( NULL != temp)
+	{
+	    if ((temp->fsId == fsId) && (temp->fsBlockNum == blockNum))
 	    {
-	    	if ((temp->fsId == fsId)&&(temp->fsBlockNum == blockNum))
-	    	{
-	    		break;
-	    	}
-	    	temp = temp->pFullNext;
+	    	return temp;
 	    }
-     return temp;
+	    temp = temp->pFullNext;
+	}
+	return temp;
 }
 
 

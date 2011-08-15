@@ -1,4 +1,4 @@
-﻿Build started 11.08.2011 17:33:27.
+﻿Build started 12.08.2011 17:45:31.
 Project "C:\WinDiskCache\DiskCache\DiskCache.vcxproj" on node 2 (rebuild target(s)).
 _PrepareForClean:
   Deleting file "Debug\DiskCache.lastbuildstate".
@@ -62,4 +62,4 @@ Done Building Project "C:\WinDiskCache\DiskCache\DiskCache.vcxproj" (rebuild tar
 
 Build succeeded.
 
-Time Elapsed 00:00:13.87
+Time Elapsed 00:00:11.44

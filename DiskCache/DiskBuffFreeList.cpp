@@ -45,12 +45,14 @@ void DiskBuffFreeList::Delete(DiskBuff * currentElement)
 		{
 			_pHead = currentElement->pFreeNext;
 			delete currentElement;
+			_pHead->pFreePrev = NULL;
 		}
 		else
 		if (_pTail == currentElement)
 		{
 			_pTail = currentElement->pFreePrev;
 			delete currentElement;
+			_pTail->pFreeNext = NULL;
 		}
 		else
 		{

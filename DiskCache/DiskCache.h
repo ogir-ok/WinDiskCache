@@ -14,10 +14,10 @@
 #define DllExport   __declspec( dllexport )
 
 #include <FSDriver.h>
-#include <Mutex.h>
+
 #include "DiskBuffHashTable.h"
 #include "DiskBuffFreeList.h"
-
+#include <Mutex.h>
 
 class DllExport DiskCache
 {

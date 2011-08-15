@@ -40,10 +40,10 @@ Mutex::Mutex()
 
 Mutex::~Mutex()
 {
-	if(WaitForSingleObject(_mutex, (DWORD)0) != WAIT_TIMEOUT )
-	{
+	//if(WaitForSingleObject(_mutex, (DWORD)0) != WAIT_TIMEOUT )
+	//{
 		CloseHandle(_mutex);
-	}
+	//}
 }
 
 void Mutex::Lock()

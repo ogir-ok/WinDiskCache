@@ -1,0 +1,7 @@
+6
+c:/WinDiskCache/disks/1.msi
+c:/WinDiskCache/disks/2.msi
+c:/WinDiskCache/disks/3.msi
+c:/WinDiskCache/disks/4.msi
+c:/WinDiskCache/disks/5.msi
+c:/WinDiskCache/disks/6.msi

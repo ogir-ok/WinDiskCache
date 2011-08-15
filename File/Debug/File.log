@@ -1,4 +1,4 @@
-﻿Build started 11.08.2011 17:31:38.
+﻿Build started 12.08.2011 16:30:11.
 Project "C:\WinDiskCache\File\File.vcxproj" on node 2 (rebuild target(s)).
 _PrepareForClean:
   Deleting file "Debug\File.lastbuildstate".
@@ -7,12 +7,12 @@ InitializeBuildStatus:
 ClCompile:
   C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D FILE_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt File.cpp
   File.cpp
-c:\windiskcache\file\file.cpp(13): warning C4996: '_open': This function or variable may be unsafe. Consider using _sopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\windiskcache\file\file.cpp(18): warning C4996: '_open': This function or variable may be unsafe. Consider using _sopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
           c:\program files\microsoft visual studio 10.0\vc\include\io.h(240) : see declaration of '_open'
 ManifestResourceCompile:
   C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\File.dll.embed.manifest.res" Debug\File_manifest.rc 
 Link:
-  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\WinDiskCache\Debug\File.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\File.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\WinDiskCache\Debug\File.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\WinDiskCache\Debug\File.lib" /MACHINE:X86 /DLL Debug\File.dll.embed.manifest.res
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\WinDiskCache\Debug\File.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\File.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\WinDiskCache\Debug\File.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\WinDiskCache\Debug\File.lib" /MACHINE:X86 /DLL Debug\File.dll.embed.manifest.res
   Debug\File.obj
      Creating library C:\WinDiskCache\Debug\File.lib and object C:\WinDiskCache\Debug\File.exp
 Manifest:
@@ -20,7 +20,7 @@ Manifest:
   C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\File.dll.embed.manifest" /manifest Debug\File.dll.intermediate.manifest
   C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\File.dll.embed.manifest.res" Debug\File_manifest.rc 
 LinkEmbedManifest:
-  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\WinDiskCache\Debug\File.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\File.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\WinDiskCache\Debug\File.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\WinDiskCache\Debug\File.lib" /MACHINE:X86 /DLL Debug\File.dll.embed.manifest.res
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\WinDiskCache\Debug\File.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\File.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\WinDiskCache\Debug\File.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\WinDiskCache\Debug\File.lib" /MACHINE:X86 /DLL Debug\File.dll.embed.manifest.res
   Debug\File.obj
      Creating library C:\WinDiskCache\Debug\File.lib and object C:\WinDiskCache\Debug\File.exp
   File.vcxproj -> C:\WinDiskCache\Debug\File.dll
@@ -31,4 +31,4 @@ Done Building Project "C:\WinDiskCache\File\File.vcxproj" (rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.11
+Time Elapsed 00:00:08.71
